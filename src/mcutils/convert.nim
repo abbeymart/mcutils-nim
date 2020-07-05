@@ -2,13 +2,13 @@ import strutils, times
 
 proc strToBool*(val: string): bool =
     try:
-        if val.toLowerAscii == "true":
+        if val.toLower == "true":
             return true
-        if val.toLowerAscii == "t":
+        if val.toLower == "t":
             return true
-        elif val.toLowerAscii == "yes":
+        elif val.toLower == "yes":
             return true
-        elif val.toLowerAscii == "y":
+        elif val.toLower == "y":
             return true
         elif val.parseInt > 0:
             return true
